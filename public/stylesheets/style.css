@@ -1,0 +1,39 @@
+.navbar-light .navbar-brand {
+    color: #05386B ;
+    font-family:  Arial, sans-serif;
+}
+img {
+    width: 50px;
+    height: 47px;
+    vertical-align: middle;
+}
+a {
+  color: #00B7FF;
+}
+@import url("//fonts.googleapis.com/css?family=Lobster|Cabin:400,700");
+
+h1, h2, h3, h4, h5, h6 {
+        margin-top: 30px;
+  font-family:  Arial, sans-serif;
+}
+
+.navbar-brand {
+  font-family:  Arial, sans-serif;
+}
+
+legend {
+  font-family:  Arial, sans-serif;
+}
+li{
+    
+    color: #05386B;
+}
+.bkimg {
+    background-image: url(../images/movieimage.jpg);
+}
+body {
+  font-family:  Arial, sans-serif;
+  color: #05386B;
+  background-color:#EdF5E1;
+   
+}

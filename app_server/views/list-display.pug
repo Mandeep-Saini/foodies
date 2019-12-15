@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1= title
+  p Here is a  list of orders #{title}
+  ul
+    each m in orders
+      li
+        a(href=`/orders/${m._id}`)= m.name
+        
+  a(href=`/new`) Create New Order
+        
