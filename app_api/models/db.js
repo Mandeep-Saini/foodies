@@ -5,7 +5,7 @@ if (process.env.NODE_ENV === 'production') {
     dbURI = process.env.MONGOLAB_URI;
 }
 
-mongoose.connect(dbURI,{dbName:'orderDB'});
+mongoose.connect('mongodb+srv://mandeep:dbMandeep@cluster0-snd78.mongodb.net/test?retryWrites=true&w=majority',{dbName:'orderDB'});
 
 // CONNECTION EVENTS
 mongoose.connection.on('connected', function() {
