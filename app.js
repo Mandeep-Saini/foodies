@@ -10,7 +10,7 @@ require('./app_api/models/orders')
 const apiRouter = require('./app_api/routes/orders');
 
 //var indexRouter = require('./app_server/routes/index');
-var usersRouter = require('./app_server/routes/users');
+//var usersRouter = require('./app_server/routes/users');
 
 var app = express();
 
@@ -31,13 +31,13 @@ next();
 });
 
 //app.use('/', indexRouter);
-app.use('/users', usersRouter);
+//app.use('/users', usersRouter);
 app.use('/api', apiRouter);
 
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
-  next(createError(404));
-});
+//app.use(function(req, res, next) {
+//  next(createError(404));
+//});
 
 // error handler
 app.use(function(err, req, res, next) {
