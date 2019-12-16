@@ -9,8 +9,8 @@ require('./app_api/models/orders')
 
 const apiRouter = require('./app_api/routes/orders');
 
-//var indexRouter = require('./app_server/routes/index');
-//var usersRouter = require('./app_server/routes/users');
+var indexRouter = require('./app_server/routes/index');
+var usersRouter = require('./app_server/routes/users');
 
 var app = express();
 
@@ -22,7 +22,7 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'restaurant','build')));
+//app.use(express.static(path.join(__dirname, 'restaurant','build')));
 app.use(function(re,res,next){
   res.header("Access-Control-Allow-Origin","*");
   res.header("Access-Control-Allow-Headers","Origin, X-Requested-With, Content-Type, Accept");
@@ -30,8 +30,8 @@ app.use(function(re,res,next){
 next();
 });
 
-//app.use('/', indexRouter);
-//app.use('/users', usersRouter);
+app.use('/', indexRouter);
+app.use('/users', usersRouter);
 app.use('/api', apiRouter);
 
 // catch 404 and forward to error handler
